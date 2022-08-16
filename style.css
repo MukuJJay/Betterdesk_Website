@@ -51,7 +51,7 @@ input:-webkit-autofill:active{
 
 /* ---texts--- */
 .text--primary{
-    font-family: "Proxima Nova";
+    font-family: 'Proxima Nova', sans-serif;
     font-size: 48px;
     line-height: 1.13;
     letter-spacing: -2.12px;
