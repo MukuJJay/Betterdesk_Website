@@ -1,4 +1,4 @@
-// ==============scroll effect===============
+// ==============header scroll effect===============
 const header = document.querySelector("header");
 const sectionOne = document.querySelector(".home");
 
@@ -32,3 +32,4 @@ hamburger.addEventListener("click", () =>{
     navMenu.classList.toggle("active");
     body.classList.toggle("hamburger-active");
 })
+
