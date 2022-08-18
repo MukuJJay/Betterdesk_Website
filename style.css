@@ -284,10 +284,28 @@ header ul{
 header ul > * + *{
     margin-left: 10px;
 }
-header ul li a{
+header .cta-link{
     color: var(--color-white);
     font-size: 14px;
     opacity: 0.5;
+}
+/* -------for hamburger menu ------- */
+/* -------for hamburger menu ------- */
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin-bottom: 5px;
+    transition: all 300ms ease;
+    background-color: var(--color-white);
+}
+.bar:last-child{
+    margin-bottom: 0;
 }
 
 /* ======================home-section======================== */
@@ -534,6 +552,59 @@ footer .container{
 
 /* ==============tablet design============= */
 @media (max-width: 768px){
+    /* ---header--- */
+    .navmenu{
+        position: fixed;
+        z-index: 12;
+        left: -100%;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--color-light-purple);
+        transition: 300ms;
+        overflow: scroll;
+        padding: 100px 20px;
+    }
+    .navmenu ul{
+        flex-direction: column;
+    }
+    .navmenu ul li{
+        margin: 0;
+    }
+    header .navmenu.active{
+        left: 0%;
+    }
+    body.hamburger-active{
+        overflow: hidden;
+    }
+    .hamburger{
+        display: block;
+        position: relative;
+        z-index: 20;
+    }
+    .page__logo{
+        position: relative;
+        z-index: 20;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    /* ---service-section--- */
+    .service li{
+        margin-bottom: 40px;
+    }
+    .service li:last-child{
+        margin-bottom: 0;
+    }
+    .service ul li{
+        max-width: 300px;
+    }
     /* ---about-section--- */
     .about ul{
         justify-content: space-evenly;
@@ -561,6 +632,72 @@ footer .container{
     }
     .footer--socials{
         margin-top: 50px;
-        width: 15%;
+        width: 20%;
     }
+
+/* ====================mobile-design====================== */
+@media (max-width: 576px){
+    /* ---utilities--- */
+    .btn--lg{
+        width: auto;
+        max-width: 80px;
+    }
+    .form--lg{
+        max-width: 200px;
+        font-size: 16px;
+    }
+    .text--primary{
+        font-size: 35px;
+    }
+    .text--semi-primary{
+        font-size: 30px;
+    }
+    .text--secondary{
+        font-size: 25px;
+    }
+    
+    /* ---home--- */
+    .home__bg-img{
+        max-width: 300px;
+    }
+    .img-wrapper{
+        padding: 10px 0;
+    }
+    /* ---service-section--- */
+    .service{
+        padding: 40px 0;
+    }
+    .service h2{
+        margin-bottom: 20px;
+    }
+    .service .margin-bottom--30{
+        margin-bottom: 10px;
+    }
+    /* ---about-section--- */
+    .about h2{
+        margin-bottom: 50px;
+    }
+    .about .banner{
+        padding: 30px 0;
+    }
+    .banner img{
+        max-width: 140px;
+    }
+}
+
+/* ==================small mobiles=========== */
+@media (max-width: 350px){
+/* ---utilities--- */
+    .form--lg, .btn--lg{
+        max-width: 130px;
+        font-size: 10px;
+    }
+    /* ---about-section--- */
+    .banner .container{
+        flex-direction: column;
+    }
+    .banner .text-container{
+        margin-bottom: 30px;
+    }
+}
 }
