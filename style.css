@@ -27,6 +27,38 @@
 
 /* ================================= utilities ================================== */
 
+/* ===== Scrollbar CSS ===== */
+
+  /* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: var(--color-warm-gray) var(--color-blue-black);
+}
+
+  /* Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-blue-black);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-warm-gray);
+    border-radius: 10px;
+    border: 3px solid var(--color-blue-black);
+}
+
+
+
+
+
+
+
+
+
+
 /* ---container--- */
 .container{
     width: 100%;
@@ -43,12 +75,12 @@
 }
 
 /* autofill */
-/* input:-webkit-autofill,
+input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 
 input:-webkit-autofill:active{
     -webkit-box-shadow: 0 0 0 30px white inset !important;
-} */
+}
 
 /* ---texts--- */
 .text--primary{
@@ -337,7 +369,7 @@ header .cta-link{
     max-width: 712px;
     height: auto;
     right: 0;
-    bottom: 25px;
+    bottom: 40px;
 }
 .img-wrapper{
     width: 100%;
@@ -352,6 +384,7 @@ header .cta-link{
     justify-content:space-evenly;
     flex-wrap: wrap;
     align-items: center;
+    gap: 20px;
 }
 
 /* ====================== service-section======================= */
@@ -686,11 +719,15 @@ footer .container{
 }
 
 /* ==================small mobiles=========== */
-@media (max-width: 350px){
-/* ---utilities--- */
+@media (max-width: 380px){
+    /* ---utilities--- */
     .form--lg, .btn--lg{
         max-width: 130px;
         font-size: 10px;
+    }
+    /* ---home-section--- */
+    .home__bg-img{
+        bottom: 70px;
     }
     /* ---about-section--- */
     .banner .container{
