@@ -21,3 +21,14 @@ entries.forEach(entry => {
 sectionOneOptions);
 
 sectionOneObserver.observe(sectionOne);
+
+//============== hamburger menu ================
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".navmenu");
+const body = document.querySelector("body")
+
+hamburger.addEventListener("click", () =>{
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+    body.classList.toggle("hamburger-active");
+})
