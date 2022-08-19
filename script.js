@@ -32,4 +32,3 @@ hamburger.addEventListener("click", () =>{
     navMenu.classList.toggle("active");
     body.classList.toggle("hamburger-active");
 })
-
