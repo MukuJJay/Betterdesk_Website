@@ -37,7 +37,7 @@
 
   /* Chrome, Edge, and Safari */
 ::-webkit-scrollbar {
-    width: 16px;
+    width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -132,6 +132,9 @@ input:-webkit-autofill:active{
 .color--blue-black{
     color: var(--color-blue-black);
 }
+.color--charcoal-gray{
+    color: var(--color-charcoal-grey);
+}
 .color--inherit{
     color: inherit;
 }
@@ -140,14 +143,17 @@ input:-webkit-autofill:active{
 }
 
 /* -----text-fonts------ */
-.text-font--28px{
+.text-font--28{
     font-size: 28px;
 }
-.text-font--24px{
+.text-font--24{
     font-size: 24px;
 }
 .text-font--16{
     font-size: 16px;
+}
+.text-font--20{
+    font-size: 20px;
 }
 .text-font--13{
     font-size: 13px;
@@ -160,6 +166,16 @@ input:-webkit-autofill:active{
 }
 .text-font--0{
     font-size: 0;
+}
+
+/* ---text-align--- */
+.text--center{
+    text-align: center;
+}
+
+/* ---line-height--- */
+.line-height--default{
+    line-height: 1.56;
 }
 
 .bold{
@@ -210,6 +226,11 @@ input:-webkit-autofill:active{
     background-color: var(--color-white);
     color: var(--color-cyan-green);
     letter-spacing: -0.32px;
+}
+.btn--blue{
+    background-color: #20bbef;
+    color: var(--color-white);
+
 }
 
 /* ---list & list items--- */
@@ -281,7 +302,6 @@ ul li{
 }
 /* ----page-logo--- */
 .page__logo{
-    display: inline-block;
     font-size: 0 !important;
     opacity: 1 !important;
 }
@@ -321,7 +341,6 @@ header .cta-link{
     font-size: 14px;
     opacity: 0.5;
 }
-/* -------for hamburger menu ------- */
 /* -------for hamburger menu ------- */
 .hamburger{
     display: none;
@@ -426,6 +445,110 @@ header .cta-link{
     max-width: 240px;
 }
 
+/* ========================reasoning-section===================== */
+.reasoning{
+    padding: 80px 0;
+    background-image: linear-gradient(117deg, #3dbdb6 3%, #0089ce 100%);
+}
+.reasoning__content{
+    margin-top: 60px;
+}
+.todo-list{
+    max-width: 500px;
+    background-color: var(--color-white);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.todo-list__header{
+    background-color: #f5f9fc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+}
+.total-task{
+    background-color: #20bbef;
+    border-radius: 40px;
+    padding: 5px 15px;
+}
+.todo-list__btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    width: 65px;
+}
+.todo-add{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+}
+.todo-add.active{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.todo-add__btn{
+    padding: 0 10px;
+}
+.todo-add--text{
+    padding: 5px 10px;
+    border: 2px solid #20bbef;
+}
+.todo-list ul{
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px 0;
+    border-top: 20px solid var(--color-white);
+    border-bottom: 20px solid var(--color-white);
+    overflow: auto;
+    max-height: 350px;
+}
+.todo-list ul > * + *{
+    margin-top: 20px;
+}
+.todo-list ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+.todo-list input[type=checkbox]{
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #20bbef;
+    border-radius: 100%;
+    cursor: pointer;
+}
+/* .todo-list input[type=checkbox]::after{
+    content: "";
+} */
+.todo-list input[type=checkbox]:hover{
+    background-color: #20bbef;
+}
+.todo-list input[type=checkbox]:checked{
+    background-color: #20bbef;
+}
+
+/* ===== Scrollbar CSS ===== */
+
+  /* Chrome, Edge, and Safari */
+.todo-list ul::-webkit-scrollbar {
+    width: 5px;
+}
+
+.todo-list ul::-webkit-scrollbar-track {
+    background: var(--color-white);
+}
+
+.todo-list ul::-webkit-scrollbar-thumb {
+    background-color: #dadada;
+    border-radius: 10px;
+    border: 0;
+}
 /* =====================about-section====================== */
 .about{
     text-align: center;
@@ -474,7 +597,7 @@ header .cta-link{
 /* ===========================video-carousel======================== */
 #slider{
     width: 100%;
-    height: 70vh;
+    max-height: 70vh;
     display: block;
     object-fit: cover;
     object-position: top;
@@ -491,16 +614,25 @@ header .cta-link{
 }
 .video ul li{
     width: 230px;
+    transition: 300ms ease;
+}
+.video ul li:hover{
+    transform: scale(120%);
 }
 .thumbnail{
     width: 80px;
     height: 80px;
     position: relative;
     z-index: 0;
+    cursor: pointer;
 }
 .thumbnail-img{
     width: 100%;
     opacity: 0.6;
+    transition: opacity 300ms ease;
+}
+.thumbnail-img:hover{
+    opacity: 1;
 }
 .video-card{
     display: flex;
@@ -508,8 +640,6 @@ header .cta-link{
     align-items: center;
 }
 .button-play {
-    width: 18px;
-    height: 18px;
     border-style: solid;
     border-width: 9px 0px 9px 14px;
     border-color: transparent transparent transparent var(--color-white);
@@ -519,7 +649,9 @@ header .cta-link{
     top: 50%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
+    cursor: pointer;
 }
+
 
 /* ======================forms========================= */
 .forms{
@@ -635,6 +767,28 @@ footer .container{
 
 /* ==============tablet design============= */
 @media (max-width: 768px){
+    /* ===== Scrollbar CSS ===== */
+
+  /* Firefox */
+    * {
+        scrollbar-width: auto;
+        scrollbar-color: var(--color-warm-gray) var(--color-blue-black);
+    }
+
+  /* Chrome, Edge, and Safari */
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: var(--color-blue-black);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--color-warm-gray);
+        border-radius: 10px;
+        border: 3px solid var(--color-blue-black);
+    }
     /* ---header--- */
     .navmenu{
         position: fixed;
