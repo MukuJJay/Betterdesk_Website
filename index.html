@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="scroll-wrapper">
         <!-- ========================header============================== -->
     <header>
         <nav class="container">
@@ -22,12 +21,12 @@
             </div>
             <div class="navmenu">
                 <ul>
-                    <li><a href="javascript:void(0)" class="cta-link">Home</a></li>
-                    <li><a href="javascript:void(0)" class="cta-link">Products</a></li>
-                    <li><a href="javascript:void(0)" class="cta-link">Demo</a></li>
-                    <li><a href="javascript:void(0)" class="cta-link">Resources</a></li>
-                    <li><a href="javascript:void(0)" class="cta-link">Sign In</a></li>
-                    <li><button class="btn btn--sm btn--ghost">Sign Up</button></li>
+                    <li class="text-font--0"><a href="javascript:void(0)" class="cta-link">Home</a></li>
+                    <li class="text-font--0"><a href="javascript:void(0)" class="cta-link">Products</a></li>
+                    <li class="text-font--0"><a href="javascript:void(0)" class="cta-link">Demo</a></li>
+                    <li class="text-font--0"><a href="javascript:void(0)" class="cta-link">Resources</a></li>
+                    <li class="text-font--0"><a href="javascript:void(0)" class="cta-link">Sign In</a></li>
+                    <li class="text-font--0"><button class="btn btn--sm btn--ghost">Sign Up</button></li>
                 </ul>
             </div>
         </nav>
@@ -81,6 +80,41 @@
         </div>
     </section>
 
+    <!-- ===============================reasoning-section================================ -->
+    <section class="reasoning">
+        <div class="container">
+            <h2 class="text--semi-primary color--white text--center margin-bottom--30">Why BetterDesk</h2>
+            <p class="text--default color--white line-height--default text--center">Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices. Donec euismod scelerisque ligula. Maecenas eu varius risus, eu aliquet arcu. </p>
+            <div class="reasoning__content">
+                <div class="todo-list">
+                    <div class="todo-list__header">
+                        <span class="text--default color--charcoal-gray">To Do List <span class="total-task color--white">6</span>
+                    </span>
+                        <button class="btn btn--sm btn--blue todo-list__btn"><span class="text-font--24">+</span>New</button>
+                        <div class="todo-add">
+                            <input type="text" placeholder="Enter your todos" class="todo-add--text">
+                            <button class="btn btn--sm btn--blue todo-add__btn"><span class="text-font--28">+</span></button>
+                        </div>
+                    </div>
+                    <ul>
+                        <li class="text--tertiary color--charcoal-gray">Complete the website <input type="checkbox"></li>
+                        <li class="text--tertiary color--charcoal-gray">Complete the website <input type="checkbox"></li>
+                        <li class="text--tertiary color--charcoal-gray">Complete the website <input type="checkbox"></li>
+                        <li class="text--tertiary color--charcoal-gray">Complete the website <input type="checkbox"></li>
+                        <li class="text--tertiary color--charcoal-gray">Complete the website <input type="checkbox"></li>
+                        <li class="text--tertiary color--charcoal-gray">Complete the website <input type="checkbox"></li>
+                        <li class="text--tertiary color--charcoal-gray">Complete the website <input type="checkbox"></li>
+                        <li class="text--tertiary color--charcoal-gray">Complete the website <input type="checkbox"></li>
+                        <li class="text--tertiary color--charcoal-gray">Complete the website <input type="checkbox"></li>
+                        <li class="text--tertiary color--charcoal-gray">Complete the website <input type="checkbox"></li>
+                        <li class="text--tertiary color--charcoal-gray">Complete the website <input type="checkbox"></li>
+                        <li class="text--tertiary color--charcoal-gray">Complete the website <input type="checkbox"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ==========================about us-section============================= -->
     <section class="about">
         <div class="container margin-bottom--80">
@@ -106,7 +140,7 @@
         <div class="banner">
             <div class="container">
                 <div class="text-container">
-                    <p class="text--default text-font--24px color--white margin-bottom--20"><span class="text-font--28 bold">BetterDesk</span> is recognized as top Unified Communications provider in 2016 Magic Quandrant</p>
+                    <p class="text--default text-font--24 color--white margin-bottom--20"><span class="text-font--28 bold">BetterDesk</span> is recognized as top Unified Communications provider in 2016 Magic Quandrant</p>
                     <a href="javascript:void(0);" class="text--default color--white text-font--16">Read Report</a>
                 </div>               
                 <img src="img/gartener.png" alt="gartener">
@@ -120,7 +154,7 @@
         <div class="container">
             <ul>
                 <li><div class="video-card">
-                    <div class="thumbnail">
+                    <div class="thumbnail" onclick = "videoURL('img/video-carousel.mp4')">
                         <img src="img/video 1.png" alt="video1" class="thumbnail-img">
                         <button class="button-play"></button>
                     </div>
@@ -130,7 +164,7 @@
                     </div>
                 </div></li>
                 <li><div class="video-card">
-                    <div class="thumbnail">
+                    <div class="thumbnail" onclick = "videoURL('img/carousel-video2.mp4')">
                         <img src="img/video 2.png" alt="video1" class="thumbnail-img">
                         <button class="button-play"></button>
                     </div>
@@ -140,7 +174,7 @@
                     </div>
                 </div></li>
                 <li><div class="video-card">
-                    <div class="thumbnail">
+                    <div class="thumbnail" onclick = "videoURL('img/carousel-video3.mp4')">
                         <img src="img/video 3.png" alt="video1" class="thumbnail-img">
                         <button class="button-play"></button>
                     </div>
@@ -150,7 +184,7 @@
                     </div>
                 </div></li>
                 <li><div class="video-card">
-                    <div class="thumbnail">
+                    <div class="thumbnail" onclick = "videoURL('img/carousel-video4.mp4')">
                         <img src="img/video 4.png" alt="video1" class="thumbnail-img">
                         <button class="button-play"></button>
                     </div>
@@ -179,27 +213,27 @@
         <div class="container">
             <div class="footer--links">
                 <ul>
-                    <li><a class="page__logo text-font--0 cta-link" href="javascript:void(0);"><img src="img/logo@2x.png" alt="logo"></a></li>
+                    <li class="text-font--0"><a class="page__logo text-font--0 cta-link" href="javascript:void(0);"><img src="img/logo@2x.png" alt="logo"></a></li>
                     <li class="text--default text-font--12 color--white" style="line-height: 1.58;">This template is created by @iamjoannajiang. UX Designer @ <a href="javascript:void(0);" class="underline cta-link">www.betterdesign.io</a></li>
                 </ul>
                 <ul>
-                    <li><a href="javacript:void(0);" class="footer--heading cta-link">about</a></li>
-                    <li><a href="javacript:void(0);" class="cta-link">Our Mission</a></li>
-                    <li><a href="javacript:void(0);" class="cta-link">Company</a></li>
-                    <li><a href="javacript:void(0);" class="cta-link">Jobs</a></li>
-                    <li><a href="javacript:void(0);" class="cta-link">Blog</a></li>
+                    <li class="text-font--0"><a href="javacript:void(0);" class="footer--heading cta-link">about</a></li>
+                    <li class="text-font--0"><a href="javacript:void(0);" class="cta-link">Our Mission</a></li>
+                    <li class="text-font--0"><a href="javacript:void(0);" class="cta-link">Company</a></li>
+                    <li class="text-font--0"><a href="javacript:void(0);" class="cta-link">Jobs</a></li>
+                    <li class="text-font--0"><a href="javacript:void(0);" class="cta-link">Blog</a></li>
                 </ul>
                 <ul>
-                    <li><a href="javacript:void(0);" class="footer--heading cta-link">support</a></li>
-                    <li><a href="javacript:void(0);" class="cta-link">FAQ</a></li>
-                    <li><a href="javacript:void(0);" class="cta-link">Help Center</a></li>
-                    <li><a href="javacript:void(0);" class="cta-link">Terms of Service</a></li>
-                    <li><a href="javacript:void(0);" class="cta-link">Privacy Policy</a></li>
+                    <li class="text-font--0"><a href="javacript:void(0);" class="footer--heading cta-link">support</a></li>
+                    <li class="text-font--0"><a href="javacript:void(0);" class="cta-link">FAQ</a></li>
+                    <li class="text-font--0"><a href="javacript:void(0);" class="cta-link">Help Center</a></li>
+                    <li class="text-font--0"><a href="javacript:void(0);" class="cta-link">Terms of Service</a></li>
+                    <li class="text-font--0"><a href="javacript:void(0);" class="cta-link">Privacy Policy</a></li>
                 </ul>
                 <ul>
-                    <li><a href="javacript:void(0);" class="footer--heading cta-link">Contact</a></li>
-                    <li><a href="javacript:void(0);" class="cta-link">Email Us</a></li>
-                    <li><a href="javacript:void(0);" class="cta-link">Live chat</a></li>
+                    <li class="text-font--0"><a href="javacript:void(0);" class="footer--heading cta-link">Contact</a></li>
+                    <li class="text-font--0"><a href="javacript:void(0);" class="cta-link">Email Us</a></li>
+                    <li class="text-font--0"><a href="javacript:void(0);" class="cta-link">Live chat</a></li>
                 </ul>
             </div>
             <div class="footer--socials">
@@ -213,7 +247,6 @@
             We look forward to see you there!</p>
         </div>
     </footer>
-    </div>
     
     
     <script src="script.js"></script>
