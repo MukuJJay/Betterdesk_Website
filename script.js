@@ -32,3 +32,16 @@ hamburger.addEventListener("click", () =>{
     navMenu.classList.toggle("active");
     body.classList.toggle("hamburger-active");
 })
+
+// ==================video carousel=====================
+const slider = document.querySelector("#slider");
+function videoURL(link){
+    slider.src = link;
+}
+
+// ===================todo-list==========================
+const newTodo = document.querySelector(".todo-list__btn");
+const addTodo = document.querySelector(".todo-add");
+newTodo.addEventListener("click", () =>{
+    addTodo.classList.toggle("active");
+})
