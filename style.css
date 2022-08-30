@@ -121,7 +121,7 @@ input:-webkit-autofill:active{
     color: var(--color-white);
 }
 .color--black{
-    color: var(--color-black);
+    color: var(--color-black) !important;
 }
 .color--ocean-blue{
     color: var(--color-ocean-blue);
@@ -248,10 +248,10 @@ ul li{
     margin-bottom: 30px;
 }
 .margin-bottom--20{
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
 }
 .margin-bottom--10{
-    margin-bottom: 10px;
+    margin-bottom: 10px !important;
 }
 .margin-bottom--50{
     margin-bottom: 50px;
@@ -472,39 +472,56 @@ header .cta-link{
     border-radius: 40px;
     padding: 5px 15px;
 }
-.todo-list__btn{
+.todo-list__header > .btn{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 5px 10px;
     width: 65px;
 }
+.todo-list__header > .btn.active{
+    width: auto;
+    height: 40px;
+}
 .todo-add{
     display: none;
     position: absolute;
     z-index: 1;
-    top: 50px;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .todo-add.active{
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.todo-add__btn{
+.todo-add .btn{
     padding: 0 10px;
+    opacity: 0.6;
+    pointer-events: none;
 }
-.todo-add--text{
+.todo-add .btn.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+.todo-add input{
     padding: 5px 10px;
     border: 2px solid #20bbef;
+}
+.todo-add input:focus{
+    outline: none;
+    border: 2px solid #9db1c0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .todo-list ul{
     max-width: 400px;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 25px 0;
     border-top: 20px solid var(--color-white);
     border-bottom: 20px solid var(--color-white);
     overflow: auto;
-    max-height: 350px;
+    height: 320px;
 }
 .todo-list ul > * + *{
     margin-top: 20px;
@@ -513,7 +530,15 @@ header .cta-link{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-right: 10px;
+    margin: 0 10px;
+}
+.todo-list li span{
+    display: inline-block;
+    max-width: 300px;
+    color: #606d78;
+}
+.todo-list li span.done{
+    text-decoration: line-through;
 }
 .todo-list input[type=checkbox]{
     appearance: none;
@@ -526,11 +551,12 @@ header .cta-link{
 /* .todo-list input[type=checkbox]::after{
     content: "";
 } */
-.todo-list input[type=checkbox]:hover{
+/* .todo-list input[type=checkbox]:hover{
     background-color: #20bbef;
-}
+} */
 .todo-list input[type=checkbox]:checked{
-    background-color: #20bbef;
+    background-color: #b8b8b8;
+    border: 0;
 }
 
 /* ===== Scrollbar CSS ===== */
@@ -582,8 +608,6 @@ header .cta-link{
     justify-content: space-between;
 }
 .banner .text-container{
-    display: flex;
-    flex-direction: column;
     max-width: 650px;
 }
 .banner a{
