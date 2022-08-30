@@ -34,14 +34,45 @@ hamburger.addEventListener("click", () =>{
 })
 
 // ==================video carousel=====================
-const slider = document.querySelector("#slider");
+const slider = document.getElementById("slider");
 function videoURL(link){
     slider.src = link;
 }
 
 // ===================todo-list==========================
-const newTodo = document.querySelector(".todo-list__btn");
+const newTodo = document.querySelector(".todo-list__header > .btn");
 const addTodo = document.querySelector(".todo-add");
-newTodo.addEventListener("click", () =>{
+const addTodoText = document.querySelector(".todo-add > input");
+const addTodoBtn = document.querySelector(".todo-add > .btn");
+const taskList = document.querySelector(".todo-list > ul");
+const taskListSpan = document.querySelector(".todo-list ul li span");
+const checkbox = document.querySelector(".todo-list input[type=checkbox]");
+newTodo.addEventListener("click", () =>{    //opening the todo-add tab 
     addTodo.classList.toggle("active");
+    newTodo.classList.toggle("active");
+    if(newTodo.classList.contains("active")){
+        newTodo.innerHTML = "Close";
+    }
+    else{
+        newTodo.innerHTML = "<span class='text-font--24'>+</span>New";
+    }
 })
+addTodoText.addEventListener("keyup", () =>{
+    if(addTodoText.value.trim() != 0){
+        addTodoBtn.classList.add("active");
+    }
+    else{
+        addTodoBtn.classList.remove("active");
+    }
+})
+let newLiTag = '';
+addTodoBtn.addEventListener("click", () =>{
+    if (addTodoText.value.trim() != 0){
+        let element = addTodoText.value;    
+        taskList.innerHTML += `<li class="margin-bottom--10"><span class="text--tertiary">${element}</span><input type="checkbox"></li>`;
+        addTodoText.value = "";
+    }
+})
+// checkbox.addEventListener("click", () =>{
+//     taskListSpan.classList.toggle("done");
+// })
